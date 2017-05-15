@@ -128,6 +128,8 @@
     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\WavePowerUp.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\Ability.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\BombAbility.cs" />
+    <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\BombRain.cs" />
+    <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\BombRainAbility.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\SlowTrapAbility.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\SlowTrapMechanics.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\StunBallAbility.cs" />

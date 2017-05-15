@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 114481436344153268}
   - component: {fileID: 114147397543439216}
   - component: {fileID: 114190941495057270}
+  - component: {fileID: 114602318506133826}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3637,6 +3638,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilitypower: 0
+--- !u!114 &114602318506133826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aecd8a4a1151064e854600f646e7fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaCost: 100
+  RequiedLevel: 1
+  KeyBind: r
+  Cooldown: 3
+  CDText: {fileID: 0}
+  AbilityGameObj: {fileID: 1839531342533810, guid: 653aabb0a51ea0547977c25c5652f394,
+    type: 2}
+  AbilityIcon: {fileID: 0}
+  ActiveImage: {fileID: 2800000, guid: b8939f5c4cc3eda4a94c904ac62a4cfe, type: 3}
+  InactiveImage: {fileID: 2800000, guid: 2bb617cb2882e1147826c21cca4a0aff, type: 3}
+  BombNumber: 10
+  TimeBetweenBombs: 0.5
+  Radius: 5
+  Damage: 200
+  ExplosionRange: 5
 --- !u!114 &114970096660877290
 MonoBehaviour:
   m_ObjectHideFlags: 1
