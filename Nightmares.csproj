@@ -120,12 +120,12 @@
     <Compile Include="Assets\_CompletedAssets\Scripts\Helpers\RandomParticlePoint.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Helpers\VolumeHandler.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\MainModule.cs" />
-    <Compile Include="Assets\_CompletedAssets\Scripts\Managers\AbilityManager.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\EnemyManager.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\GameOverManager.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\PauseManager.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\ScoreManager.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\WaveManager.cs" />
+    <Compile Include="Assets\_CompletedAssets\Scripts\Managers\WavePowerUp.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\Ability.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\BombAbility.cs" />
     <Compile Include="Assets\_CompletedAssets\Scripts\Player\Abilities\SlowTrapAbility.cs" />

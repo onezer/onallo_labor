@@ -19,28 +19,64 @@ namespace CompleteProject
         public Text enemytext;
         public Text wavetext;
 
+        public float DamageModifier;
+        public float HpModifier;
+        public float XPModifier;
+
         float timer = 0;
 
         bool invoked = false;
+
+
+        public GameObject Enemymanager;
+        WavePowerUp PowerUp;
 
         GameObject[] Enemies;
 
         void Awake()
         {
-            CurrentWave = 1;
+            //CurrentWave = 1;
+            PowerUp = Enemymanager.GetComponent<WavePowerUp>();
             Spawn();
+        }
+
+        void PowerUpMinions()
+        {
+            PowerUp.DamageModifier += DamageModifier;
+            PowerUp.HpModifier += HpModifier;
+            PowerUp.XPModifier += XPModifier;
+        }
+
+        int CalculateMinionNumber(int MinionType)
+        {
+            if(CurrentWave % 10 == 0)
+            {
+                
+                return 1;
+            }
+
+
+            switch(MinionType)
+            {
+                case 1: return CurrentWave % 10;
+                case 2: return Mathf.RoundToInt((CurrentWave % 10) * 1.5f);
+                case 3: return (CurrentWave % 10) * 2;
+                default: return 0;
+            }
         }
 
         void Spawn()
         {
-            SpawnHellephant = CurrentWave;
-            SpawnZombear = Mathf.RoundToInt(CurrentWave * 1.5f);
-            SpawnZombunny = CurrentWave * 2;
+            if(CurrentWave % 10 == 0) PowerUpMinions();
+
+            SpawnHellephant = CalculateMinionNumber(1);
+            SpawnZombear = CalculateMinionNumber(2);
+            SpawnZombunny = CalculateMinionNumber(3);
         }
 
         void NextWave()
         {
-            CurrentWave++;
+            CurrentWave += 10;
             Spawn();
             invoked = false;
         }
@@ -62,8 +98,6 @@ namespace CompleteProject
                     invoked = true;
                 }
             }
-
-            
         }
     }
 }

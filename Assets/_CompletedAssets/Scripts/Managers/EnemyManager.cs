@@ -11,15 +11,24 @@ namespace CompleteProject
         public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
         public int Type;
 
+        public float HpModifier;
+        public float DamageModifier;
+        public float XPModifier;
+
+
+        EnemyMain Main;
+
         int Amount;
 
         public GameObject waveManager;
 
         WaveManager Wave;
+        WavePowerUp PowerUp;
 
         void Start ()
         {
             Wave = waveManager.GetComponent<WaveManager>();
+            PowerUp = GetComponent<WavePowerUp>();
 
             RefreshAmount();
 
@@ -65,6 +74,13 @@ namespace CompleteProject
             }
         }
 
+        void Update()
+        {
+            HpModifier = PowerUp.HpModifier;
+            XPModifier = PowerUp.XPModifier;
+            DamageModifier = PowerUp.DamageModifier;
+        }
+
         void Spawn ()
         {
             // If the player has no health left...
@@ -81,7 +97,12 @@ namespace CompleteProject
                 int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
                 // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-                Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                GameObject SpawnedEnemy = Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+                Main = SpawnedEnemy.GetComponent<EnemyMain>();
+                Main.StartingHP = Mathf.RoundToInt(Main.StartingHP * HpModifier);
+                Main.CurrentHP = Main.StartingHP;
+                Main.AttackDMG = Mathf.RoundToInt(Main.AttackDMG * DamageModifier);
+                Main.XPValue = Mathf.RoundToInt(Main.XPValue * XPModifier);
                 Amount--;
                 RefreshNumbers();
             }

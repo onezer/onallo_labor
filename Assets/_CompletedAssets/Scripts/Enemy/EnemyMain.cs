@@ -10,11 +10,55 @@ namespace CompleteProject
     {
         EnemyHealth HP;
         EnemyMovement MOV;
+        EnemyArcherAttack Archer;
+        EnemyBomberAttack Bomber;
+        EnemyAttack Attack;
+
+        string Name;
 
         void Awake()
         {
+            Name = gameObject.name;
+
             HP = GetComponent<EnemyHealth>();
             MOV = GetComponent<EnemyMovement>();
+
+            switch(Name)
+            {
+                case "Hellephant": Bomber = GetComponent<EnemyBomberAttack>(); break;
+                case "ZomBear": Archer = GetComponent<EnemyArcherAttack>(); break;
+                case "ZomBunny": Attack = GetComponent<EnemyAttack>(); break;
+            }
+            
+            
+            
+        }
+
+        public int XPValue
+        {
+            get
+            {
+                return HP.xpValue;
+            }
+
+            set
+            {
+                HP.xpValue = value;
+            }
+        }
+
+        public int StartingHP
+        {
+            get
+            {
+                return HP.startingHealth;
+            }
+
+            set
+            {
+                HP.startingHealth = value;
+            }
+
         }
 
         public bool isEnraged
@@ -27,6 +71,44 @@ namespace CompleteProject
             set
             {
                 MOV.isEnraged = value;
+            }
+        }
+
+        public int CurrentHP
+        {
+            get
+            {
+                return HP.currentHealth;
+            }
+
+            set
+            {
+                HP.currentHealth = value;
+            }
+        }
+
+        public int AttackDMG
+        {
+            get
+            {
+                switch (Name)
+                {
+                    case "Hellephant": return Bomber.attackDamage;
+                    case "ZomBear": return Archer.attackDamage;
+                    case "ZomBunny": return Attack.attackDamage;
+                }
+
+                return 0;
+            }
+
+            set
+            {
+                switch (Name)
+                {
+                    case "Hellephant": Bomber.attackDamage = value; break;
+                    case "ZomBear": Archer.attackDamage = value; break;
+                    case "ZomBunny": Attack.attackDamage = value; break;
+                }
             }
         }
 
