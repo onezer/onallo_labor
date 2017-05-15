@@ -76,7 +76,7 @@ namespace CompleteProject
 
         void NextWave()
         {
-            CurrentWave += 10;
+            CurrentWave ++;
             Spawn();
             invoked = false;
         }
