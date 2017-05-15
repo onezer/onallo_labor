@@ -46,8 +46,6 @@ namespace CompleteProject
 
         void Update()
         {
-
-
             timer += Time.deltaTime;
             Collider[] hitColliders = Physics.OverlapBox(transform.position, scale);
 
