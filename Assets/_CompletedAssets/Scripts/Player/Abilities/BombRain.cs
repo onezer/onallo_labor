@@ -19,7 +19,7 @@ namespace CompleteProject
 
         void Awake()
         {
-            transform.localScale = new Vector3(Radius,Radius,1);
+            transform.localScale = new Vector3(Radius*2,Radius*2,1);
         }
 
         Vector3 RandomPosition()
