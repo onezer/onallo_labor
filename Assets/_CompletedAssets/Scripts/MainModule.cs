@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace CompleteProject
 {
+    //This interface contains the common features both player and enemies have
     public interface MainModule
     {
 

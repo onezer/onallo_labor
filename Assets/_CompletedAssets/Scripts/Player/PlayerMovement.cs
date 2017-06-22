@@ -7,7 +7,6 @@ namespace CompleteProject
     {
         public float stoppingDistance;
         public GameObject crosshair;
-        GameObject prevenemy;
         bool isMoving;
         Vector3 hitpoint;
         public GameObject Target;
@@ -111,6 +110,7 @@ namespace CompleteProject
 
         void Highlight()
         {
+            //Managing the crosshair
             if(Target != null)
             {
                 crosshair.transform.position = Target.transform.position + new Vector3(0f,2f,-2f);
@@ -143,7 +143,7 @@ namespace CompleteProject
                     }
                 }
 
-
+                //This is for a feature not implemented yet
                 for (int i = 0; i < len; i++)
                 {
                     if (allenemies[i] == hitEnemy)

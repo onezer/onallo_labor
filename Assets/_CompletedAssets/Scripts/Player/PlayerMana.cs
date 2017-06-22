@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace CompleteProject
 {
-
+    //This manages the mana system
     public class PlayerMana : MonoBehaviour
     {
         public int CurrentMana;
@@ -48,6 +48,7 @@ namespace CompleteProject
 
         void Update()
         {
+            //Updating the UI
             ManaSlider.maxValue = MaxMana;
             ManaSlider.value = CurrentMana;
             ManaText.text = MaxMana + "/" + CurrentMana;

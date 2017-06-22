@@ -19,7 +19,7 @@ namespace CompleteProject
         LineRenderer gunLine;                           // Reference to the line renderer.
         AudioSource gunAudio;                           // Reference to the audio source.
         Light gunLight;                                 // Reference to the light component.
-		public Light faceLight;								// Duh
+		public Light faceLight;							
         float effectsDisplayTime = 0.04f;                // The proportion of the timeBetweenBullets that the effects will display for.
         public float StunTime = 20f;
         public EnemyHealth enemyHealth;

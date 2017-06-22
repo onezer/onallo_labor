@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightmares", "Nightmares.csproj", "{5FC0BCEB-FAD4-0ED9-5BD3-285F17F807D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightmares.Editor", "Nightmares.Editor.csproj", "{24E0FFBA-EDD2-422F-BAED-F18CD1058B14}"

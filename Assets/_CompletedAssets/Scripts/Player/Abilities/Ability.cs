@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace CompleteProject
 {
-
+    
     public abstract class Ability : MonoBehaviour
     {
         public int ManaCost;
@@ -77,6 +77,7 @@ namespace CompleteProject
             Manage();
         }
 
+        
         void Manage()
         {
             if (timer > 0)

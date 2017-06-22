@@ -24,7 +24,7 @@ namespace CompleteProject
 
         bool Animating = false;
 
-        List<MainModule> modules;  //a player és az enemy MainModule-jait tartalmazza
+        List<MainModule> modules;  //Containing player and enemy mainmodules
 
 
         void Awake() {

@@ -14,6 +14,7 @@ namespace CompleteProject
 
         GameObject CurrentBall;
 
+        //Calculates the vector for throwing the bomb
         public static Vector3 CalculateThrow(Vector3 StartingPos, Vector3 targetPos, float ThrowingDegree)
         {
             float alpha = Mathf.Deg2Rad * ThrowingDegree;

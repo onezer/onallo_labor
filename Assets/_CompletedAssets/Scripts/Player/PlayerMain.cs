@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace CompleteProject
 {
+    //An interface to the features of the player
     public class PlayerMain : MonoBehaviour ,MainModule {
         PlayerHealth HP;
         PlayerMovement MOV;

@@ -12,6 +12,7 @@ namespace CompleteProject
 
         public float AbilityPwrPerLevel;
 
+        //Variables to tune the player levelling
         public int MaxManaPerLevel;
         public int ManaRegenPerLevel;
         public int MaxHealthPerLevel;
